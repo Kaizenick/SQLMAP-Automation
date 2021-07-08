@@ -1,0 +1,682 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "Firefox",
+      "version": "78.9.0"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "78.9.0"
+    },
+    "pages": [
+      {
+        "startedDateTime": "2021-07-02T08:53:19.933-04:00",
+        "id": "page_1",
+        "title": "Damn Vulnerable Web App (DVWA) v1.0.7 :: DVWA Security",
+        "pageTimings": {
+          "onContentLoad": 393,
+          "onLoad": 456
+        }
+      }
+    ],
+    "entries": [
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2021-07-02T08:53:19.933-04:00",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "http://192.168.1.106/dvwa/dvwa/js/dvwaPage.js",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "192.168.1.106"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Referer",
+              "value": "http://192.168.1.106/dvwa/security.php"
+            },
+            {
+              "name": "Cookie",
+              "value": "security=medium; PHPSESSID=ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "security",
+              "value": "medium"
+            },
+            {
+              "name": "PHPSESSID",
+              "value": "ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Fri, 02 Jul 2021 12:29:14 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Apache/2.2.8 (Ubuntu) DAV/2"
+            },
+            {
+              "name": "Last-Modified",
+              "value": "Tue, 16 Mar 2010 05:56:22 GMT"
+            },
+            {
+              "name": "ETag",
+              "value": "\"18169-307-481e4a83ded80\""
+            },
+            {
+              "name": "Accept-Ranges",
+              "value": "bytes"
+            },
+            {
+              "name": "Content-Length",
+              "value": "775"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=15, max=91"
+            },
+            {
+              "name": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/x-javascript"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/x-javascript",
+            "size": 775,
+            "text": "/* Help popup */\r\n\r\nfunction popUp(URL) {\r\n\tday = new Date();\r\n\tid = day.getTime();\r\n\teval(\"page\" + id + \" = window.open(URL, '\" + id + \"', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=300,left = 540,top = 250');\");\r\n}\r\n\r\n/* Form validation */\r\n\r\nfunction validate_required(field,alerttxt)\r\n{\r\nwith (field) {\r\n  if (value==null||value==\"\") {\r\n    alert(alerttxt);return false;\r\n  }\r\n  else {\r\n    return true;\r\n  }\r\n }\r\n}\r\n\r\nfunction validate_form(thisform) {\r\nwith (thisform) {\r\n\r\n  // Guestbook form\r\n  if (validate_required(txtName,\"Name can not be empty.\")==false)\r\n  {txtName.focus();return false;}\r\n  \r\n  if (validate_required(mtxMessage,\"Message can not be empty.\")==false)\r\n  {mtxMessage.focus();return false;}\r\n  \r\n  }\r\n}\r\n\r\n"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 775
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "ssl": 0,
+          "connect": 0,
+          "send": 0,
+          "wait": 0,
+          "receive": 0
+        },
+        "time": 0,
+        "_securityState": "insecure"
+      },
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2021-07-02T08:53:20.382-04:00",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "http://192.168.1.106/dvwa/favicon.ico",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "192.168.1.106"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"
+            },
+            {
+              "name": "Accept",
+              "value": "image/webp,*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "security=medium; PHPSESSID=ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "security",
+              "value": "medium"
+            },
+            {
+              "name": "PHPSESSID",
+              "value": "ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Fri, 02 Jul 2021 12:29:15 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Apache/2.2.8 (Ubuntu) DAV/2"
+            },
+            {
+              "name": "Last-Modified",
+              "value": "Mon, 06 Sep 2010 15:59:42 GMT"
+            },
+            {
+              "name": "ETag",
+              "value": "\"16bdb-57e-48f995e515780\""
+            },
+            {
+              "name": "Accept-Ranges",
+              "value": "bytes"
+            },
+            {
+              "name": "Content-Length",
+              "value": "1406"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=15, max=89"
+            },
+            {
+              "name": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "name": "Content-Type",
+              "value": "image/x-icon"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "image/x-icon",
+            "size": 1406,
+            "encoding": "base64",
+            "text": "AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAUAAAAAAAAAAAAAAAEAAAABAABUTUkAXldSAFBKRgBbU08AXVdSAF1YUwBgWVQAX1hTAFtUTwBde24AXLKZAFy0mwBcrZUAXKiRAGejkACIl48AraqnAL27uACJhIAAXXNoAGCmkQCJj4kAiYWBAHhybgBnYl0AXWNcAF2FdgBdjX0Aen95ANnZ1wDLyMcAZl9aAFtUUABljn8Ax8fFAHp0cABdWlQAXXdrAGOEdwDDzskAycfFAF5YUwCXnJcAxcPBAF1fWABfj38AxNXPAIN9egDi4eAAXVtVAGS5oQCWlpIAXFVQAJyYlQBcqJIAY4d6AGNdWAC1srAAkYyJAFywmABdk4EAhYB8AJOOiwBqZF8AXXpuAFzNrwCFmI8AX1lUAHJsZwBqZmAAXlpUAF1dVgBdcGUAXJyIAFy8oQB+npIAvLm3AF1WUQBdXlcAXW1jAF17bwB+jIQAqqilALq3tgBtZ2IAXVdRAFJLSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAgEBAQEBAQEBAQEBAQEBAQMBAQEEBQUEAQYHAQEBAQEIAQEJCgsMDQ4PEBESAQEBCAETFBUWFxgZGhscHR4fASABISIjAQEBAQEkJSYnKCkgASorAQEBAQEBAQEsLS4vIAESMAcBAQEBAQEBATEyMzQBBis1AQEBAQEBAQEBNjc0AQE4OToBAQEBAQEBATs8NAEBAQE9Pj8BAQEBAUBBQgcBAQEBAUNERUZHSElKS0xNAQEBAQEBAU5PUCZRUlNUTQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQFVAAEBAQEBAQEBAQEBAQEBVgAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8="
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 1406
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "ssl": 0,
+          "connect": 0,
+          "send": 0,
+          "wait": 0,
+          "receive": 0
+        },
+        "time": 0,
+        "_securityState": "insecure"
+      },
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2021-07-02T08:53:19.914-04:00",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "http://192.168.1.106/dvwa/dvwa/css/main.css",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "192.168.1.106"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"
+            },
+            {
+              "name": "Accept",
+              "value": "text/css,*/*;q=0.1"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Referer",
+              "value": "http://192.168.1.106/dvwa/security.php"
+            },
+            {
+              "name": "Cookie",
+              "value": "security=medium; PHPSESSID=ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "security",
+              "value": "medium"
+            },
+            {
+              "name": "PHPSESSID",
+              "value": "ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 0
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Fri, 02 Jul 2021 12:29:14 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Apache/2.2.8 (Ubuntu) DAV/2"
+            },
+            {
+              "name": "Last-Modified",
+              "value": "Mon, 06 Sep 2010 16:01:54 GMT"
+            },
+            {
+              "name": "ETag",
+              "value": "\"16bd1-f69-48f99662f8080\""
+            },
+            {
+              "name": "Accept-Ranges",
+              "value": "bytes"
+            },
+            {
+              "name": "Content-Length",
+              "value": "3945"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=15, max=92"
+            },
+            {
+              "name": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/css"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/css",
+            "size": 3945,
+            "text": "body{\r\n\tmargin:0;\r\n\tcolor: #2f2f2f;\r\n\tfont: 12px/15px Arial, Helvetica, sans-serif;\r\n\tmin-width:981px;\r\n\theight: 100%;\r\n\tposition:relative;\r\n}\r\n\r\nbody.home{\r\n\tbackground: #e7e7e7;\t\r\n}\r\n\r\ndiv.clear {\r\n\tclear: both;\r\n}\r\n\r\na {\r\n\tcolor: #99cc33;\r\n\ttext-decoration: underline;\r\n\tfont-weight: bold;\r\n}\r\n\r\na img {\r\n\tborder: 0;\r\n}\r\n\r\na:hover {\r\n\ttext-decoration: none;\r\n}\r\n\r\ninput, textarea, select {\r\n\tfont: 100% arial,sans-serif;\r\n\tvertical-align: middle;\r\n}\r\n\r\nform,fieldset{\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\tborder-style: none;\r\n}\r\n\r\n\r\nem {\r\n\tfont-weight: bold;\r\n\tfont-style: normal;\r\n}\r\n\r\n\r\nh1, h2, h3, h4, h5, h6 {\r\n\tmargin-top: 0px;\r\n}\r\n\r\n\r\nh1 {\r\n\tfont-size: 200%;\r\n}\r\n\r\n\r\nh2 {\r\n\tfont-size: 160%;\r\n}\r\n\r\n\r\nh3 {\r\n\tfont-size: 130%;\r\n}\r\n\r\n\r\nhr {\r\n\tborder-width: 0px;\r\n\tcolor: #C3D9FF;\r\n\tbackground-color: #C3D9FF;\r\n\theight: 1px;\r\n}\r\n\r\n\r\nul {\r\n\tlist-style-type: none;\r\n\tpadding-left: 0px;\r\n\tmargin-top: 0px;\r\n\tmargin-bottom: 0px;\r\n\tmargin-left: 0px;\r\n}\r\n\r\n\r\nul + ul, ul + h1, ul + h2, ul + p {\r\n\tmargin-top: 20px;\r\n}\r\n\r\n\r\n.fixed {\r\n\tfont-family: Fixed, Courier, monospace;\r\n\tfont-size: 13px;\r\n}\r\n\r\n\r\ndiv.warning {\r\n\tborder: 2px solid #ff0000;\r\n\tpadding: 10px 20px 10px 20px;\r\n\tcolor: #800000;\r\n\tmargin-top: 15px;\r\n\tmargin-bottom: 15px;\r\n}\r\n\r\ndiv.warning h1 {\r\n\tcolor: #ff0000;\r\n}\r\n\r\ndiv.message {\r\n\tborder: 1px solid #C0C0C0;\r\n\tpadding: 5px;\r\n\tmargin: 10px 0px 10px 0px;\r\n\tbackground-color: #f8fafa;\r\n\twidth: 45%;\r\n}\r\n\r\ndiv#container {\r\n\twidth: 900px;\r\n\theight: 100%;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n\tbackground:#f4f4f4;\r\n\tfont-size: 13px;\r\n}\r\n\r\ndiv#header {\r\n\tpadding: 10px;\r\n\toverflow:hidden;\r\n\tbackground: #2f2f2f;\r\n\tborder-bottom: 5px solid #A1CC33;\r\n\ttext-align: center;\r\n}\r\n\r\ndiv#system_info {\r\n\tpadding: 10px;\r\n\ttext-align: right;\r\n}\r\n\r\n\r\ndiv#main_body {\r\n\tfloat:right;\r\n\twidth: 693px;\r\n\tbackground: #f4f4f4;\r\n\tpadding-top: 20px;\r\n\tpadding-bottom: 10px;\r\n\tfont-size: 13px;\r\n}\r\n\r\n\r\ndiv.body_padded {\r\n\tpadding-left: 20px;\r\n\tpadding-right: 20px;\r\n}\r\n\r\n\r\ndiv#main_menu {\r\n\tfloat: left;\r\n\twidth: 200px;\r\n\theight: 100%;\r\n\tbackground-color: #f4f4f4;\r\n\tpadding-top: 10px;\r\n\tpadding-bottom: 10px;\r\n}\r\n\r\n\r\ndiv#main_menu li {\r\n\tborder-width: 1px;\r\n\tborder-style: solid;\r\n\tborder-color: #D2D4D4 #6B778C #6B778C #D2D4D4;\r\n\tpadding: 3px 5px 3px 5px;\r\n\tmargin-bottom: 3px;\r\n\tbackground-color: #bebebe;\r\n}\r\n\r\n\r\ndiv#main_menu li a {\r\n\tcolor: #000000;\r\n\ttext-decoration: none;\r\n\ttext-decoration: none;\r\n}\r\n\r\n\r\ndiv#main_menu li.selected {\r\n\tborder-color: #758DAE #758DAE #758DAE #758DAE;\r\n\tbackground-color: #99cc33;\r\n}\r\n\r\n\r\ndiv#main_menu li.selected a {\r\n\tcolor: #F9F7ED;\r\n}\r\n\r\n\r\ndiv#main_menu li:hover {\r\n\tborder-color: #D2D4D4;\r\n}\r\n\r\n\r\ndiv#main_menu li:hover a {\r\n\tcolor: #F9F7ED;\r\n}\r\n\r\n\r\ndiv#main_menu_padded {\r\n\tpadding: 15px;\r\n}\r\n\r\n\r\ndiv#footer {\r\n\tcolor: #999999;\r\n\tbackground: #2f2f2f;\r\n\tpadding: 10px;\r\n\ttext-align: center;\r\n\tborder-top: 5px solid #A1CC33;\r\n}\r\n\r\n\r\ninput.popup_button {\r\n\tborder-width: 1px;\r\n\tborder-style: solid;\r\n\tborder-color: #D2D4D4 #6B778C #6B778C #D2D4D4;\r\n\tpadding: 3px 5px 3px 5px;\r\n\tmargin-bottom: 3px;\r\n\tbackground-color: #C3C3C3;\r\n\tfloat: right;\r\n}\r\n\r\n\r\ndiv.vulnerable_code_area {\r\n\tbackground-color: #f8fafa;\r\n\tborder-width: 1px;\r\n\tborder-style: solid;\r\n\tborder-color: #000000;\r\n\tpadding: 10px 20px 10px 20px;\r\n\tmargin-bottom: 20px;\r\n}\r\n\r\ndiv#guestbook_comments {\r\n\twidth: 45%;\r\n\tbackground-color: #f8fafa;\r\n\tborder-width: 1px;\r\n\tborder-style: solid;\r\n\tborder-color: #C0C0C0;\r\n\tpadding: 5px 10px 5px 10px;\r\n\tmargin-bottom: 5px;\r\n}\r\n\r\ndiv#idslog {\r\n\tborder: 1px solid #C0C0C0;\r\n\tpadding: 5px;\r\n\tmargin: 10px 0px 10px 0px;\r\n\tbackground-color: #f8fafa;\r\n}\r\n\r\n\r\npre {\r\n\tcolor: red;\r\n}\r\n\r\n\r\ndiv.submenu {\r\n\tborder-bottom: 1px solid #000000;\r\n\tmargin-bottom: 15px;\r\n\tpadding: 4px 0px 10px 0px;\r\n\tfont-size: 13px;\r\n}\r\n\r\n\r\nspan.submenu_item {\r\n\tpadding: 0px 10px 0px 10px;\r\n}\r\n\r\n\r\nspan.submenu_item + span.submenu_item {\r\n\tborder-left: 1px dashed #000000;\r\n\tfont-size: 13px;\r\n}\r\n\r\n\r\nspan.selected {\r\n\tfont-weight: bold;\r\n}\r\n"
+          },
+          "redirectURL": "",
+          "headersSize": 0,
+          "bodySize": 3945
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "ssl": 0,
+          "connect": 0,
+          "send": 0,
+          "wait": 0,
+          "receive": 0
+        },
+        "time": 0,
+        "_securityState": "insecure"
+      },
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2021-07-02T08:53:19.567-04:00",
+        "request": {
+          "bodySize": 36,
+          "method": "POST",
+          "url": "http://192.168.1.106/dvwa/security.php#",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "192.168.1.106"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "Content-Length",
+              "value": "36"
+            },
+            {
+              "name": "Origin",
+              "value": "http://192.168.1.106"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Referer",
+              "value": "http://192.168.1.106/dvwa/security.php"
+            },
+            {
+              "name": "Cookie",
+              "value": "security=low; PHPSESSID=ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            },
+            {
+              "name": "Upgrade-Insecure-Requests",
+              "value": "1"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "security",
+              "value": "low"
+            },
+            {
+              "name": "PHPSESSID",
+              "value": "ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 556,
+          "postData": {
+            "mimeType": "application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "security",
+                "value": "medium"
+              },
+              {
+                "name": "seclev_submit",
+                "value": "Submit"
+              }
+            ],
+            "text": "security=medium&seclev_submit=Submit"
+          }
+        },
+        "response": {
+          "status": 302,
+          "statusText": "Found",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Fri, 02 Jul 2021 12:53:15 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Apache/2.2.8 (Ubuntu) DAV/2"
+            },
+            {
+              "name": "X-Powered-By",
+              "value": "PHP/5.2.4-2ubuntu5.10"
+            },
+            {
+              "name": "Expires",
+              "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+            },
+            {
+              "name": "Cache-Control",
+              "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+            },
+            {
+              "name": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "name": "Set-Cookie",
+              "value": "security=medium"
+            },
+            {
+              "name": "Location",
+              "value": "/dvwa/security.php"
+            },
+            {
+              "name": "Content-Length",
+              "value": "0"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=15, max=97"
+            },
+            {
+              "name": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/html"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "security",
+              "value": "medium"
+            }
+          ],
+          "content": {
+            "mimeType": "text/html; charset=utf-8",
+            "size": 4196,
+            "comment": "Response bodies are not included."
+          },
+          "redirectURL": "/dvwa/security.php",
+          "headersSize": 429,
+          "bodySize": 4625
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 20,
+          "receive": 0
+        },
+        "time": 20,
+        "_securityState": "insecure",
+        "serverIPAddress": "192.168.1.106",
+        "connection": "80"
+      },
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2021-07-02T08:53:19.614-04:00",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "http://192.168.1.106/dvwa/security.php",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "192.168.1.106"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "Referer",
+              "value": "http://192.168.1.106/dvwa/security.php"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "security=medium; PHPSESSID=ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            },
+            {
+              "name": "Upgrade-Insecure-Requests",
+              "value": "1"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "security",
+              "value": "medium"
+            },
+            {
+              "name": "PHPSESSID",
+              "value": "ef8dde95c1f3a1ede3e5e62cc4c3985b"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 459
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.1",
+          "headers": [
+            {
+              "name": "Date",
+              "value": "Fri, 02 Jul 2021 12:53:15 GMT"
+            },
+            {
+              "name": "Server",
+              "value": "Apache/2.2.8 (Ubuntu) DAV/2"
+            },
+            {
+              "name": "X-Powered-By",
+              "value": "PHP/5.2.4-2ubuntu5.10"
+            },
+            {
+              "name": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "name": "Cache-Control",
+              "value": "no-cache, must-revalidate"
+            },
+            {
+              "name": "Expires",
+              "value": "Tue, 23 Jun 2009 12:00:00 GMT"
+            },
+            {
+              "name": "Content-Length",
+              "value": "4196"
+            },
+            {
+              "name": "Keep-Alive",
+              "value": "timeout=15, max=96"
+            },
+            {
+              "name": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/html;charset=utf-8"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/html; charset=utf-8",
+            "size": 4196,
+            "text": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Damn Vulnerable Web App (DVWA) v1.0.7 :: DVWA Security</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"dvwa/images/logo.png\" alt=\"Damn Vulnerable Web App\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul><li onclick=\"window.location='.'\" class=\"\"><a href=\".\">Home</a></li><li onclick=\"window.location='instructions.php'\" class=\"\"><a href=\"instructions.php\">Instructions</a></li><li onclick=\"window.location='setup.php'\" class=\"\"><a href=\"setup.php\">Setup</a></li></ul><ul><li onclick=\"window.location='vulnerabilities/brute/.'\" class=\"\"><a href=\"vulnerabilities/brute/.\">Brute Force</a></li><li onclick=\"window.location='vulnerabilities/exec/.'\" class=\"\"><a href=\"vulnerabilities/exec/.\">Command Execution</a></li><li onclick=\"window.location='vulnerabilities/csrf/.'\" class=\"\"><a href=\"vulnerabilities/csrf/.\">CSRF</a></li><li onclick=\"window.location='vulnerabilities/fi/.?page=include.php'\" class=\"\"><a href=\"vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li><li onclick=\"window.location='vulnerabilities/sqli/.'\" class=\"\"><a href=\"vulnerabilities/sqli/.\">SQL Injection</a></li><li onclick=\"window.location='vulnerabilities/sqli_blind/.'\" class=\"\"><a href=\"vulnerabilities/sqli_blind/.\">SQL Injection (Blind)</a></li><li onclick=\"window.location='vulnerabilities/upload/.'\" class=\"\"><a href=\"vulnerabilities/upload/.\">Upload</a></li><li onclick=\"window.location='vulnerabilities/xss_r/.'\" class=\"\"><a href=\"vulnerabilities/xss_r/.\">XSS reflected</a></li><li onclick=\"window.location='vulnerabilities/xss_s/.'\" class=\"\"><a href=\"vulnerabilities/xss_s/.\">XSS stored</a></li></ul><ul><li onclick=\"window.location='security.php'\" class=\"selected\"><a href=\"security.php\">DVWA Security</a></li><li onclick=\"window.location='phpinfo.php'\" class=\"\"><a href=\"phpinfo.php\">PHP Info</a></li><li onclick=\"window.location='about.php'\" class=\"\"><a href=\"about.php\">About</a></li></ul><ul><li onclick=\"window.location='logout.php'\" class=\"\"><a href=\"logout.php\">Logout</a></li></ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>DVWA Security <img src=\"dvwa/images/lock.png\"></h1>\r\n\r\n\t<br />\r\n\t\r\n\t<h2>Script Security</h2>\r\n\r\n\t\r\n\r\n\t<form action=\"#\" method=\"POST\">\r\n\t\t<p>Security Level is currently <em>medium</em>.<p>\r\n\t\t<p>You can set the security level to low, medium or high.</p>\r\n\t\t<p>The security level changes the vulnerability level of DVWA.</p>\r\n\r\n\t\t<select name=\"security\">\r\n\t\t\t<option value=\"low\">low</option><option value=\"medium\" selected=\"selected\">medium</option><option value=\"high\">high</option>\r\n\t\t</select>\r\n\t\t<input type=\"submit\" value=\"Submit\" name=\"seclev_submit\">\r\n\t</form>\r\n\r\n\t<br />\r\n\t<hr />\r\n\t<br />\r\n\r\n\t<h2>PHPIDS</h2>\r\n\r\n\t<p><a href=\"http://hiderefer.com/?http://php-ids.org/\" target=\"_blank\">PHPIDS</a> v.0.6 (PHP-Intrusion Detection System) is a security layer for PHP based web applications. </p>\r\n\t<p>You can enable PHPIDS across this site for the duration of your session.</p>\r\n\r\n\t<p>PHPIDS is currently <em>disabled</em>. [<a href=\"?phpids=on\">enable PHPIDS</a>]</p>\r\n\t[<a href=\"?test=%22><script>eval(window.name)</script>\">Simulate attack</a>] -\r\n\t[<a href=\"ids_log.php\">View IDS log</a>]\r\n\t\r\n</div>\r\n\r\n\t\t\t\t<br />\r\n\t\t\t\t<br />\r\n\t\t\t\t<div class=\"body_padded\"><div class=\"message\">Security level set to medium</div></div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<div align=\"left\"><b>Username:</b> admin<br /><b>Security Level:</b> medium<br /><b>PHPIDS:</b> disabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.0.7</p>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+          },
+          "redirectURL": "",
+          "headersSize": 347,
+          "bodySize": 4543
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 26,
+          "receive": 0
+        },
+        "time": 26,
+        "_securityState": "insecure",
+        "serverIPAddress": "192.168.1.106",
+        "connection": "80"
+      }
+    ]
+  }
+}
