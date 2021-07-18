@@ -3,7 +3,6 @@ import requests
 import bs4
 import os
 import re
-import logging
 
 print("HPE CTY SQLMAP AUTOMATION")
 
